@@ -1,0 +1,57 @@
+{
+    "name": "laravel/lumen",
+    "description": "The Laravel Lumen Framework.",
+    "keywords": ["framework", "laravel", "lumen"],
+    "license": "MIT",
+    "type": "project",
+    "require": {
+        "php": "^8.0|^8.2",
+        "aws/aws-sdk-php": "^3.321",
+        "doctrine/dbal": "^4.0",
+        "dusterio/lumen-passport": "^0.3.8",
+        "guzzlehttp/guzzle": "^7.8",
+        "illuminate/mail": "^8.83",
+        "laravel/lumen-framework": "^8.0.0",
+        "laravel/socialite": "^5.12",
+        "league/flysystem-aws-s3-v3": "^3.28",
+        "league/flysystem-local": "^3.28",
+        "pusher/pusher-php-server": "^7.2",
+        "ramsey/uuid": "^4.7",
+        "sentry/sentry-laravel": "^4.2",
+        "socialiteproviders/facebook": "^4.1",
+        "socialiteproviders/google": "^4.1",
+        "stripe/stripe-php": "^13.12",
+        "twilio/sdk": "^7.15",
+        "willywes/agora-sdk-php": "^0.1.3"
+    },
+    "require-dev": {
+        "fakerphp/faker": "^1.9.1",
+        "mockery/mockery": "^1.3.1",
+        "phpunit/phpunit": "^9.5.10",
+        "fpdf/fpdf": "^1.83"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/",
+            "Database\\Factories\\": "database/factories/",
+            "Database\\Seeders\\": "database/seeders/"
+        }
+    },
+    "autoload-dev": {
+        "classmap": [
+            "tests/"
+        ]
+    },
+    "config": {
+        "preferred-install": "dist",
+        "sort-packages": true,
+        "optimize-autoloader": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "scripts": {
+        "post-root-package-install": [
+            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+        ]
+    }
+}
